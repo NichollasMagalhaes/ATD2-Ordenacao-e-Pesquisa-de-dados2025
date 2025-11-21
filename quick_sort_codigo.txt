@@ -1,0 +1,17 @@
+— QUICK SORT (ordem decrescente) —
+
+def quick_sort_decrescente(arr): if len(arr) <= 1: return arr else: pivo
+= arr[0] maiores = [x for x in arr[1:] if x > pivo] menores = [x for x
+in arr[1:] if x <= pivo] return quick_sort_decrescente(maiores) +
+[pivo] + quick_sort_decrescente(menores)
+
+— VETORES —
+
+melhor_caso = [1, 10, 13, 14, 29, 37] caso_medio = [29, 10, 14, 37, 13,
+1] pior_caso = [37, 29, 14, 13, 10, 1]
+
+— EXECUCAO —
+
+print(“=== QUICK SORT (DECRESCENTE) ===”) for nome, vetor in [(“Melhor
+caso”, melhor_caso), (“Caso medio”, caso_medio), (“Pior caso”,
+pior_caso)]: print(f”{nome}: {quick_sort_decrescente(vetor.copy())}“)
